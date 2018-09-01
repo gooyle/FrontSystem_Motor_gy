@@ -25,15 +25,11 @@ int main(void)
 	LCD_Clear(WHITE);	
   	while(1) 
 	{		 
-		count ++;
 		POINT_COLOR=BLACK;	  
 		LCD_ShowString(30,40,280,24,24,"Embeded Course Design");	
 		LCD_ShowString(30,85,210,24,24,"SX1715007 GuYu");	      					 
 		LCD_ShowString(30,130,200,24,24,"2018-8-30");	
-		if(count < 68 )
-			MotorUse(DIR_NEG,ENABLE);
-		else 
-			MotorUse(STOP,ENABLE);
-
+		MotorUse(DIR_NEG,ENABLE);
+		delay_ms(20000);
 	} 
 }

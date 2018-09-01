@@ -133,7 +133,7 @@ void TIM8_TRG_COM_TIM14_IRQHandler(void)
 {
 	if(TIM_GetFlagStatus(TIM14,TIM_FLAG_Update) == SET)
 	{
-		
+		printf("finish\n");
 	}
  TIM_ClearITPendingBit(TIM14,TIM_IT_Update);//清除中断标志位
 

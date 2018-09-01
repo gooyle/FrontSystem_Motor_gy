@@ -1,5 +1,9 @@
 #include "encoder.h"
-
+/***********************
+*encoder ÅäÖÃº¯Êý
+*@Tim2¡ª¡ªPA0
+*@TIM2¡ª¡ªPB3
+***********************/
 void Encoder_Init_TIM2()
 
 {
@@ -26,10 +30,8 @@ void Encoder_Init_TIM2()
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 	
 	GPIO_PinAFConfig(GPIOA,GPIO_PinSource0,GPIO_AF_TIM2);
-	//GPIO_PinAFConfig(GPIOA,GPIO_PinSource1,GPIO_AF_TIM2);
 	
 	GPIO_PinAFConfig(GPIOB,GPIO_PinSource3,GPIO_AF_TIM2);
-	//GPIO_PinAFConfig(GPIOA,GPIO_PinSource1,GPIO_AF_TIM2);
 	
 	TIM_DeInit(TIM2);
 	TIM_TimeBaseStructure.TIM_Prescaler=0;

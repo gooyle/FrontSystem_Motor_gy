@@ -11,4 +11,5 @@ void Gpio_Initial(void);
 void MotorEnable(void);
 void MotorDisable(void);
 void MotorUse(uint8_t Dir,uint8_t EnStatement);
+void TIM8_TRG_COM_TIM14_IRQHandler(void);
 #endif
