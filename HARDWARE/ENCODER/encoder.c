@@ -4,7 +4,7 @@
 *@Tim2——PA0
 *@TIM2——PB3
 ***********************/
-void Encoder_Init_TIM2()
+void Encoder_Init_TIM2(void)
 
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -48,7 +48,7 @@ void Encoder_Init_TIM2()
 	
 	TIM_ClearFlag(TIM2,TIM_FLAG_Update);//清除所有标志
 	TIM_ITConfig(TIM2,TIM_IT_Update,ENABLE);//允许中断更新
-	TIM_SetCounter(TIM2,10000);//需要设置CNT起始值
+	TIM_SetCounter(TIM2,Encoder_InitialValue);//需要设置CNT起始值
 	
 	TIM_Cmd(TIM2,ENABLE);
 

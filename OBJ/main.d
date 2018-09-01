@@ -44,3 +44,4 @@
 ..\obj\main.o: D:\software_gy\MDK\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\main.o: ..\HARDWARE\PWM\pwm.h
 ..\obj\main.o: ..\HARDWARE\PID\pid_initial.h
+..\obj\main.o: ..\HARDWARE\ENCODER\encoder.h
