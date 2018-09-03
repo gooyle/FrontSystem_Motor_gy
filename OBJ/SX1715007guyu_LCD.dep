@@ -1,5 +1,5 @@
 Dependencies for Project 'SX1715007guyu', Target 'LCD': (DO NOT MODIFY !)
-F (.\main.c)(0x5B8D32F3)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER-I "C:\Users\gooyle\Desktop\embeded course design\USER\RTE"-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x5B8D3D7F)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER-I "C:\Users\gooyle\Desktop\embeded course design\USER\RTE"-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (main.h)(0x5B8D1C39)
 I (..\SYSTEM\sys\sys.h)(0x55CC1471)
 I (..\USER\stm32f4xx.h)(0x542BA483)
@@ -43,7 +43,7 @@ I (..\HARDWARE\LED\led.h)(0x53B53723)
 I (..\HARDWARE\LCD\lcd.h)(0x55C200D6)
 I (D:\software_gy\MDK\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)
 I (..\HARDWARE\PWM\pwm.h)(0x5B8CE6A3)
-I (..\HARDWARE\PID\pid_initial.h)(0x5B8D29F5)
+I (..\HARDWARE\PID\pid_initial.h)(0x5B8D3748)
 I (..\HARDWARE\ENCODER\encoder.h)(0x5B8A8057)
 F (.\stm32f4xx_it.c)(0x5426CDF4)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER-I "C:\Users\gooyle\Desktop\embeded course design\USER\RTE"-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f4xx_it.o --omf_browse ..\obj\stm32f4xx_it.crf --depend ..\obj\stm32f4xx_it.d)
 I (stm32f4xx_it.h)(0x5426CDC1)
@@ -197,8 +197,8 @@ I (..\HARDWARE\LCD\font.h)(0x52C52FE7)
 I (..\SYSTEM\usart\usart.h)(0x5397010C)
 I (D:\software_gy\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
 I (..\SYSTEM\delay\delay.h)(0x53B7797C)
-F (..\HARDWARE\PID\pid_initial.c)(0x5B8D2A7C)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER-I "C:\Users\gooyle\Desktop\embeded course design\USER\RTE"-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\pid_initial.o --omf_browse ..\obj\pid_initial.crf --depend ..\obj\pid_initial.d)
-I (..\HARDWARE\PID\pid_initial.h)(0x5B8D29F5)
+F (..\HARDWARE\PID\pid_initial.c)(0x5B8D3ABC)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER-I "C:\Users\gooyle\Desktop\embeded course design\USER\RTE"-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\pid_initial.o --omf_browse ..\obj\pid_initial.crf --depend ..\obj\pid_initial.d)
+I (..\HARDWARE\PID\pid_initial.h)(0x5B8D3748)
 I (..\SYSTEM\sys\sys.h)(0x55CC1471)
 I (..\USER\stm32f4xx.h)(0x542BA483)
 I (..\CORE\core_cm4.h)(0x53C7D530)
@@ -240,7 +240,7 @@ I (..\HARDWARE\ENCODER\encoder.h)(0x5B8A8057)
 I (..\USER\main.h)(0x5B8D1C39)
 I (D:\software_gy\MDK\ARM\ARMCC\include\math.h)(0x55DB2B7E)
 I (..\SYSTEM\delay\delay.h)(0x53B7797C)
-F (..\HARDWARE\PWM\pwm.c)(0x5B8D32AE)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER-I "C:\Users\gooyle\Desktop\embeded course design\USER\RTE"-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\pwm.o --omf_browse ..\obj\pwm.crf --depend ..\obj\pwm.d)
+F (..\HARDWARE\PWM\pwm.c)(0x5B8D3B32)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER-I "C:\Users\gooyle\Desktop\embeded course design\USER\RTE"-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\pwm.o --omf_browse ..\obj\pwm.crf --depend ..\obj\pwm.d)
 I (..\HARDWARE\PWM\pwm.h)(0x5B8CE6A3)
 I (..\SYSTEM\sys\sys.h)(0x55CC1471)
 I (..\USER\stm32f4xx.h)(0x542BA483)
@@ -280,10 +280,10 @@ I (..\FWLIB\inc\stm32f4xx_fsmc.h)(0x53DBAFAD)
 I (..\HARDWARE\LED\led.h)(0x53B53723)
 I (..\SYSTEM\usart\usart.h)(0x5397010C)
 I (D:\software_gy\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
-I (..\HARDWARE\PID\pid_initial.h)(0x5B8D29F5)
+I (..\HARDWARE\PID\pid_initial.h)(0x5B8D3748)
 I (D:\software_gy\MDK\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)
 I (..\USER\main.h)(0x5B8D1C39)
-F (..\HARDWARE\ENCODER\encoder.c)(0x5B8D2788)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER-I "C:\Users\gooyle\Desktop\embeded course design\USER\RTE"-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\encoder.o --omf_browse ..\obj\encoder.crf --depend ..\obj\encoder.d)
+F (..\HARDWARE\ENCODER\encoder.c)(0x5B8D3582)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER-I "C:\Users\gooyle\Desktop\embeded course design\USER\RTE"-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\encoder.o --omf_browse ..\obj\encoder.crf --depend ..\obj\encoder.d)
 I (..\HARDWARE\ENCODER\encoder.h)(0x5B8A8057)
 I (..\USER\stm32f4xx.h)(0x542BA483)
 I (..\CORE\core_cm4.h)(0x53C7D530)

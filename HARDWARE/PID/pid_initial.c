@@ -9,10 +9,10 @@ PidParameters PidMotor_1;
 /*********初始化pid基础参数************/
 int PidMotorsets(void)
 {
-	PidMotor_1.Kp = 40;
+	PidMotor_1.Kp = 80;
 	PidMotor_1.Ki = 0;
 	//PidMotor_1.set_velocity ; 
-	PidMotor_1.set_Encoders = 3;
+	PidMotor_1.set_Encoders = 50;
 	PidMotor_1.PwmCcrvalue = 0;
 	return 0;
     }
@@ -30,7 +30,7 @@ int Pid_SetsGet(void)
 	TIM_SetCounter(TIM2,Encoder_InitialValue);//未防止数据溢出，重置CNT
 
 	//delay_ms(TIME_SAMPLEVALUE);
-	
+	//printf("%d\n",Encoder_DifferValue);
 	return Encoder_DifferValue;
 }
 
@@ -52,9 +52,10 @@ int Pid_PwmContrl(void)
 	CcrValue = (int) (PidMotor_1.Kp * Et + PidMotor_1.Ki * Sum_Et);
 
 	if(CcrValue >= MOTOR1_ARRVALUE)
-		return MOTOR1_ARRVALUE -1 ;
+		CcrValue = MOTOR1_ARRVALUE - 1;
 	else if(CcrValue <= MOTOR1_ARRVALUE)
-		return 0 + 1;
-	else
-		return CcrValue;
+		CcrValue = 0 + 1;
+	else if((CcrValue > 0) && (CcrValue < MOTOR1_ARRVALUE))
+		CcrValue = CcrValue;
+	return CcrValue;
 }

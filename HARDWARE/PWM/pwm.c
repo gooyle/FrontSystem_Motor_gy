@@ -42,7 +42,7 @@ void TIM14_PWM_Init(u32 arr,u32 psc)
 	//初始化TIM14 Channel1 PWM模式	 
 	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1; //选择定时器模式:TIM脉冲宽度调制模式2
  	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable; //比较输出使能
-	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_Low; //输出极性:TIM输出比较极性低
+	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High; //输出极性:TIM输出比较极性低
 	TIM_OC1Init(TIM14, &TIM_OCInitStructure);  //根据T指定的参数初始化外设TIM1 4OC1
 
 	TIM_OC1PreloadConfig(TIM14, TIM_OCPreload_Enable);  //使能TIM14在CCR1上的预装载寄存器
@@ -121,14 +121,14 @@ void MotorUse(uint8_t Dir,uint8_t EnStatement)
 		MotorDisable();		
 }
 
-///*********pwm14中断服务程序*********/
-//void TIM8_TRG_COM_TIM14_IRQHandler(void)
-//{
-//	if(TIM_GetFlagStatus(TIM14,TIM_FLAG_Update) == SET)
-//	{
-//				TIM_SetCompare1(TIM14, PidMotor_1.PwmCcrvalue);	//tim14通道1
-//				
-//	}
-// TIM_ClearITPendingBit(TIM14,TIM_IT_Update);//清除中断标志位
+/*********pwm14中断服务程序*********/
+void TIM8_TRG_COM_TIM14_IRQHandler(void)
+{
+	if(TIM_GetFlagStatus(TIM14,TIM_FLAG_Update) == SET)
+	{
+				TIM_SetCompare1(TIM14, (int) PidMotor_1.PwmCcrvalue);	//tim14通道1
+				
+	}
+ TIM_ClearITPendingBit(TIM14,TIM_IT_Update);//清除中断标志位
 
-//}
+}

@@ -5,7 +5,7 @@
 #include "stdio.h"
 
 #define TIME_SAMPLEVALUE 10  //10ms
-#define MOTOR1_ARRVALUE 1000 //满载值为1000
+#define MOTOR1_ARRVALUE 500 //满载值为1000
 
 /*****变量定义*****/
 typedef struct Pid

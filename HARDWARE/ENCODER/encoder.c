@@ -34,12 +34,10 @@ void Encoder_Init_TIM2(void)
 	GPIO_PinAFConfig(GPIOB,GPIO_PinSource3,GPIO_AF_TIM2);
 	
 	TIM_DeInit(TIM2);
-	TIM_Cmd(TIM2,DISABLE);//设置为失能
 	TIM_TimeBaseStructure.TIM_Prescaler=0;
 	TIM_TimeBaseStructure.TIM_Period=65535;//CNT最大值
 	TIM_TimeBaseStructure.TIM_ClockDivision=TIM_CKD_DIV1;
 	TIM_TimeBaseStructure.TIM_CounterMode=TIM_CounterMode_Up;
-	
 	TIM_TimeBaseInit(TIM2,&TIM_TimeBaseStructure);
 	
 	TIM_EncoderInterfaceConfig(TIM2,TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);
@@ -50,7 +48,9 @@ void Encoder_Init_TIM2(void)
 	
 	TIM_ClearFlag(TIM2,TIM_FLAG_Update);//清除所有标志
 	TIM_ITConfig(TIM2,TIM_IT_Update,ENABLE);//允许中断更新
-	TIM_SetCounter(TIM2,Encoder_InitialValue);//需要设置CNT起始值
+	TIM_SetCounter(TIM2,Encoder_InitialValue);//CNT起始值
+	
+	TIM_Cmd(TIM2,ENABLE);
 
 }
 
