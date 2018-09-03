@@ -22,6 +22,7 @@ void TIM14_PWM_Init(u32 arr,u32 psc)
 	TIM_OCInitTypeDef  TIM_OCInitStructure;
 	NVIC_InitTypeDef NVIC_InitStructure;
 
+	TIM_TimeBaseInit(TIM14,&TIM_TimeBaseStructure);//初始化定时器14
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM14,ENABLE);  	//TIM14时钟使能    
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOF, ENABLE); 	//使能PORTF时钟	
 	
@@ -39,7 +40,6 @@ void TIM14_PWM_Init(u32 arr,u32 psc)
 	TIM_TimeBaseStructure.TIM_Period=arr;   //自动重装载值
 	TIM_TimeBaseStructure.TIM_ClockDivision=TIM_CKD_DIV1; 
 	
-	TIM_TimeBaseInit(TIM14,&TIM_TimeBaseStructure);//初始化定时器14
 	
 	//初始化TIM14 Channel1 PWM模式	 
 	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1; //选择定时器模式:TIM脉冲宽度调制模式1
@@ -51,7 +51,7 @@ void TIM14_PWM_Init(u32 arr,u32 psc)
  
   TIM_ARRPreloadConfig(TIM14,ENABLE);//ARPE使能 
 	
-	//TIM_Cmd(TIM14, ENABLE);  //使能TIM14,这里不使能						
+	TIM_Cmd(TIM14, DISABLE);  //使能TIM14,这里不使能						
 
 	/*************pwm中断配置*************/
 	NVIC_InitStructure.NVIC_IRQChannel = TIM8_TRG_COM_TIM14_IRQn;
@@ -95,6 +95,11 @@ void MotorDisable(void)
 {
 		TIM_Cmd(TIM14, DISABLE); 								  
 }
+/*********编码器捕捉使能********/
+void EncoderEnable(void)
+{
+	TIM_Cmd(TIM2,ENABLE);
+}
 /**电机使用函数**/
 /******************************
 *INT3——PG6
@@ -107,7 +112,6 @@ void MotorUse(uint8_t Dir,uint8_t EnStatement)
 {
 	if( EnStatement == ENABLE)
 	{
-		TIM_SetCompare1(TIM14,PidMotor_1.set_velocity);	//tim14通道1
 		MotorEnable();
 		if (Dir == DIR_POS)
 		{
@@ -133,7 +137,8 @@ void TIM8_TRG_COM_TIM14_IRQHandler(void)
 {
 	if(TIM_GetFlagStatus(TIM14,TIM_FLAG_Update) == SET)
 	{
-				TIM_SetCompare1(TIM14,Pid_PwmContrl(TIME_SAMPLEVALUE));	//tim14通道1
+				TIM_SetCompare1(TIM14,Pid_PwmContrl());	//tim14通道1
+				
 	}
  TIM_ClearITPendingBit(TIM14,TIM_IT_Update);//清除中断标志位
 

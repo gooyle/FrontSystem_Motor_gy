@@ -1,15 +1,19 @@
 #ifndef _PID_INITIAL_H
 #define _PID_INITIAL_H
 #include "sys.h"
-
+#include "stdlib.h"
+#include "stdio.h"
 #define TIME_SAMPLEVALUE 10  //10ms
-#define MOTOR1_ARRVALUE 1000-1 //满载值为1000
+#define MOTOR1_ARRVALUE 1000 //满载值为1000
 
 /*****变量定义*****/
 typedef struct Pid
+	
 {
 	float set_velocity;
 	float test_velocity;
+	int set_Encoders;//调试时设定此值
+	int test_Encoders;//调试时所得的编码数值
 	float Kp;
 	float Ki;
 	float Kd;
@@ -18,7 +22,7 @@ typedef struct Pid
 
 /***函数声明****/
 int PidMotorsets(void);
-float Pid_SetsGet(uint16_t);
-int Pid_PwmContrl(uint16_t Time_MotorSample);
+int Pid_SetsGet(void);
+int Pid_PwmContrl(void);
 
 #endif
