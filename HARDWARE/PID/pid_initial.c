@@ -9,10 +9,10 @@ PidParameters PidMotor_1;
 /*********初始化pid基础参数************/
 int PidMotorsets(void)
 {
-	PidMotor_1.Kp = 80;
-	PidMotor_1.Ki = 0;
+	PidMotor_1.Kp = 56;
+	PidMotor_1.Ki = 0.12;
 	//PidMotor_1.set_velocity ; 
-	PidMotor_1.set_Encoders = 50;
+	PidMotor_1.set_Encoders = 60;
 	PidMotor_1.PwmCcrvalue = 0;
 	return 0;
     }
@@ -26,7 +26,7 @@ int Pid_SetsGet(void)
 {
 	int Encoder_DifferValue = 0;
 
-	Encoder_DifferValue =  abs(TIM_GetCounter(TIM2) - Encoder_InitialValue);//这个是更新的变量
+	Encoder_DifferValue =  abs((uint16_t)(TIM_GetCounter(TIM2)) - Encoder_InitialValue);//这个是更新的变量
 	TIM_SetCounter(TIM2,Encoder_InitialValue);//未防止数据溢出，重置CNT
 
 	//delay_ms(TIME_SAMPLEVALUE);
@@ -39,22 +39,23 @@ int Pid_SetsGet(void)
 *输出：PWM——CCR的数值
 *在中断中调用此函数
 *************************************/
-int Pid_PwmContrl(void)
+float Pid_PwmContrl(void)
 {
-	int CcrValue = 0;
-	static float Et = 0;
-	static float Sum_Et = 0;//Et:设定值与实际值的差，对应Kp
+	int CcrValue ;
+	static float Et = 0.0;
+	static float Sum_Et = 0.0;//Et:设定值与实际值的差，对应Kp
 												//Sum_Et:离散化，对所有差值进行求和，对应Ki
-	
+	int Encoder_DifferValue = 0;
+
 	PidMotor_1.test_Encoders = Pid_SetsGet();//这里直接将测量的编码器差值赋给	
 	Et = PidMotor_1.set_Encoders - PidMotor_1.test_Encoders;
 	Sum_Et = Sum_Et + Et;
-	CcrValue = (int) (PidMotor_1.Kp * Et + PidMotor_1.Ki * Sum_Et);
-
+	CcrValue = (PidMotor_1.Kp * Et + PidMotor_1.Ki * Sum_Et);
+	//printf("%f\n",Et);
 	if(CcrValue >= MOTOR1_ARRVALUE)
-		CcrValue = MOTOR1_ARRVALUE - 1;
-	else if(CcrValue <= MOTOR1_ARRVALUE)
-		CcrValue = 0 + 1;
+		CcrValue = MOTOR1_ARRVALUE ;
+	else if(CcrValue <= 0)
+		CcrValue = 0;
 	else if((CcrValue > 0) && (CcrValue < MOTOR1_ARRVALUE))
 		CcrValue = CcrValue;
 	return CcrValue;
