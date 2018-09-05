@@ -8,8 +8,17 @@
 #include "pid_initial.h"
 #include "encoder.h"
 #include "rcc_config.h"
+#include "stdio.h"
+
 
 extern PidParameters PidMotor_1;
+/***调用sprintf函数完成变量输出**/
+void LCD_Show(void)
+{
+char tmp[5];
+sprintf(tmp,"%d",PidMotor_1.test_Encoders);
+LCD_ShowString(30,200,200,24,24,tmp);
+}
 
 int main(void)
 { 
@@ -26,7 +35,7 @@ int main(void)
 	LCD_ShowString(30,40,280,24,24,"Embeded System ");	
 	LCD_ShowString(30,80,280,24,24,"Course Design");	
 	LCD_ShowString(30,120,210,24,24,"SX1715007 GuYu");	      					 
-	LCD_ShowString(30,160,200,24,24,"2018-9-1");	
+	LCD_ShowString(30,160,200,24,24,"2018-9-5");	
 /*************电机pid调试**************/
 	PidMotorsets();//电机pid参数设定
 	Gpio_Initial();//电机GPIO配置
@@ -37,8 +46,8 @@ int main(void)
 	{		 
 		PidMotor_1.PwmCcrvalue = Pid_PwmContrl();
  		delay_ms(TIME_SAMPLEVALUE);	
-		printf("%d\n",PidMotor_1.test_Encoders);
-
+		//printf("%d\r\n",PidMotor_1.test_Encoders);
+		LCD_Show();
 	} 
 }
 
