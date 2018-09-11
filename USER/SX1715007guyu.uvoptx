@@ -196,18 +196,18 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>129</LineNumber>
+          <LineNumber>158</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134240230</Address>
+          <Address>134240226</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\SYSTEM\usart\usart.c</Filename>
+          <Filename>..\SYSTEM\usart\usart_gy.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\LCD\../SYSTEM/usart/usart.c\129</Expression>
+          <Expression>\\LCD\../SYSTEM/usart/usart_gy.c\158</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -241,7 +241,7 @@
         <Ww>
           <count>4</count>
           <WinNumber>2</WinNumber>
-          <ItemText>PidMotor_1.set_Encoders,0x0A</ItemText>
+          <ItemText>PidMotor_1.set_Encoders,0x10</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
@@ -467,11 +467,11 @@
       <GroupNumber>3</GroupNumber>
       <FileNumber>12</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\SYSTEM\usart\usart.c</PathWithFileName>
-      <FilenameWithoutPath>usart.c</FilenameWithoutPath>
+      <PathWithFileName>..\SYSTEM\usart\usart_gy.c</PathWithFileName>
+      <FilenameWithoutPath>usart_gy.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

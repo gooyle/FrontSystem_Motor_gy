@@ -15,10 +15,14 @@ extern PidParameters PidMotor_1;
 /***调用sprintf函数完成变量输出**/
 void LCD_Show(void)
 {
-char tmp[5];
-sprintf(tmp,"%d",PidMotor_1.test_Encoders);
-LCD_ShowString(30,200,200,24,24,tmp);
-}
+	char tmp[5];
+	char tmp1[5];
+	sprintf(tmp,"%d",PidMotor_1.set_Encoders);
+	LCD_ShowString(30,200,200,24,24,tmp);
+
+	sprintf(tmp1,"%d",PidMotor_1.test_Encoders);
+	LCD_ShowString(30,240,200,24,24,tmp1);
+	}
 
 int main(void)
 { 
@@ -44,17 +48,8 @@ int main(void)
 	MotorUse(DIR_POS,ENABLE);
   	while(1) 
 	{	
-//		if(USART_RX_STA&0x8000)				   
-//		{
-//			PidMotor_1.set_Encoders = USART_ReceiveData(USART1);       //向串口1发送数据
-//			while(USART_GetFlagStatus(USART1,USART_FLAG_TC)!=SET);//等待发送结束
-//			printf("\r\n%d",PidMotor_1.set_Encoders);//插入换行
-//			USART_RX_STA=0;
-//		}
-
 		PidMotor_1.PwmCcrvalue = Pid_PwmContrl();
  		delay_ms(TIME_SAMPLEVALUE);	
-		printf("%d\r\n",PidMotor_1.test_Encoders);
 		LCD_Show();
 	} 
 	return 0;
