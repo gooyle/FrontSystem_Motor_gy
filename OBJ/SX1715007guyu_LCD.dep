@@ -1,5 +1,5 @@
 Dependencies for Project 'SX1715007guyu', Target 'LCD': (DO NOT MODIFY !)
-F (.\main.c)(0x5B8FD394)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER -I..\HARDWARE\Rcc-I F:\NUAA_postgraduate\Git_gy\FrontSystem_Motor_gy\USER\RTE-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x5B979061)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER -I..\HARDWARE\Rcc-I F:\NUAA_postgraduate\Git_gy\FrontSystem_Motor_gy\USER\RTE-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (main.h)(0x5B8D1C39)
 I (..\SYSTEM\sys\sys.h)(0x55CC1471)
 I (..\USER\stm32f4xx.h)(0x5B8E7B51)
@@ -198,7 +198,7 @@ I (..\HARDWARE\LCD\font.h)(0x52C52FE7)
 I (..\SYSTEM\usart\usart.h)(0x5397010C)
 I (D:\software_gy\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
 I (..\SYSTEM\delay\delay.h)(0x53B7797C)
-F (..\HARDWARE\PID\pid_initial.c)(0x5B8E88E1)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER -I..\HARDWARE\Rcc-I F:\NUAA_postgraduate\Git_gy\FrontSystem_Motor_gy\USER\RTE-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\pid_initial.o --omf_browse ..\obj\pid_initial.crf --depend ..\obj\pid_initial.d)
+F (..\HARDWARE\PID\pid_initial.c)(0x5B8FEFEC)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER -I..\HARDWARE\Rcc-I F:\NUAA_postgraduate\Git_gy\FrontSystem_Motor_gy\USER\RTE-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\pid_initial.o --omf_browse ..\obj\pid_initial.crf --depend ..\obj\pid_initial.d)
 I (..\HARDWARE\PID\pid_initial.h)(0x5B8DECEB)
 I (..\SYSTEM\sys\sys.h)(0x55CC1471)
 I (..\USER\stm32f4xx.h)(0x5B8E7B51)
@@ -430,7 +430,7 @@ I (..\FWLIB\inc\stm32f4xx_can.h)(0x53DBAFAD)
 I (..\FWLIB\inc\stm32f4xx_dac.h)(0x53DBAFAD)
 I (..\FWLIB\inc\stm32f4xx_dcmi.h)(0x53DBAFAD)
 I (..\FWLIB\inc\stm32f4xx_fsmc.h)(0x53DBAFAD)
-F (..\SYSTEM\usart\usart.c)(0x55CC14BB)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER -I..\HARDWARE\Rcc-I F:\NUAA_postgraduate\Git_gy\FrontSystem_Motor_gy\USER\RTE-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
+F (..\SYSTEM\usart\usart.c)(0x5B94DC6F)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\FWLIB\inc -I..\HARDWARE\PID -I..\HARDWARE\PWM -I..\USER -I..\HARDWARE\ENCODER -I..\HARDWARE\Rcc-I F:\NUAA_postgraduate\Git_gy\FrontSystem_Motor_gy\USER\RTE-I D:\software_gy\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I D:\software_gy\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
 I (..\SYSTEM\sys\sys.h)(0x55CC1471)
 I (..\USER\stm32f4xx.h)(0x5B8E7B51)
 I (..\CORE\core_cm4.h)(0x53C7D530)

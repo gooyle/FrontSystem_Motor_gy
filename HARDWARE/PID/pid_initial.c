@@ -12,7 +12,7 @@ int PidMotorsets(void)
 	PidMotor_1.Kp = 56;
 	PidMotor_1.Ki = 0.12;
 	//PidMotor_1.set_velocity ; 
-	PidMotor_1.set_Encoders = 60;
+	PidMotor_1.set_Encoders = 20;
 	PidMotor_1.PwmCcrvalue = 0;
 	return 0;
     }

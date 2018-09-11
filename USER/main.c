@@ -29,7 +29,7 @@ int main(void)
 	
 	/************lcd参数设置*************/
  	LCD_Init();           //初始化LCD FSMC接口
-	POINT_COLOR=BLACK;      //画笔颜色：红色
+	POINT_COLOR=BLACK;      //画笔颜色：黑色
 	LCD_Clear(WHITE);	
 	POINT_COLOR=BLACK;	  
 	LCD_ShowString(30,40,280,24,24,"Embeded System ");	
@@ -41,14 +41,23 @@ int main(void)
 	Gpio_Initial();//电机GPIO配置
 	TIM14_PWM_Init(MOTOR1_ARRVALUE - 1,84 - 1);	//84M/84=1Mhz的计数频率,重装载值500，所以PWM频率为 1M/500=2Khz.
 	Encoder_Init_TIM2();
-	MotorUse(DIR_NEG,ENABLE);
+	MotorUse(DIR_POS,ENABLE);
   	while(1) 
-	{		 
+	{	
+//		if(USART_RX_STA&0x8000)				   
+//		{
+//			PidMotor_1.set_Encoders = USART_ReceiveData(USART1);       //向串口1发送数据
+//			while(USART_GetFlagStatus(USART1,USART_FLAG_TC)!=SET);//等待发送结束
+//			printf("\r\n%d",PidMotor_1.set_Encoders);//插入换行
+//			USART_RX_STA=0;
+//		}
+
 		PidMotor_1.PwmCcrvalue = Pid_PwmContrl();
  		delay_ms(TIME_SAMPLEVALUE);	
-		//printf("%d\r\n",PidMotor_1.test_Encoders);
+		printf("%d\r\n",PidMotor_1.test_Encoders);
 		LCD_Show();
 	} 
+	return 0;
 }
 
 
